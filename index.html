@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人主页</title>
+</head>
+<body>
+    <script>
+ 
+        !function(){
+         
+         function n(n,e,t){
+         
+         return n.getAttribute(e)||t
+         
+         }
+         
+         function e(n){
+         
+         return document.getElementsByTagName(n)
+         
+         }
+         
+         function t(){
+         
+         var t=e("script"),o=t.length,i=t[o-1];
+         
+         return{
+         
+         l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)
+         
+         }
+         
+         }
+         
+         function o(){
+         
+         a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
+         
+         c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
+         
+         }
+         
+         function i(){
+         
+         r.clearRect(0,0,a,c);
+         
+         var n,e,t,o,m,l;
+         
+         s.forEach(function(i,x){
+         
+         for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],
+         
+         null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,
+         
+         l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),
+         
+         t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))
+         
+         }),
+        
+         x(i)
+         
+         }
+         
+         var a,c,u,m=document.createElement("canvas"),
+         
+         d=t(),l="c_n"+d.l,r=m.getContext("2d"),
+        x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||
+         
+         function(n){
+        
+         window.setTimeout(n,1e3/45)
+         
+         },
+         
+         w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.onresize=o,
+         
+         window.onmousemove=function(n){
+         
+         n=n||window.event,y.x=n.clientX,y.y=n.clientY
+         
+         },
+         
+         window.onmouseout=function(){
+         
+         y.x=null,y.y=null
+         
+         };
+         
+         for(var s=[],f=0;d.n>f;f++){
+         
+         var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})
+         
+         }
+         
+         u=s.concat([y]),
+         
+         setTimeout(function(){i()},100)
+         
+         }();
+         
+         </script>
+    <h1>我的主页：</h1>
+    
+        <h2>自我介绍：</h3>
+            <h3>基本信息：</h3>
+                <p>中文名：王翊辰</p>
+                <p>英文名：Eden</p>
+                <p>性别：男</p>
+            <h3>编程能力：</h3>
+                <p>图形化、python、HTML</p>
+            <h3>才艺：</h3>
+                <h4>有级别：</h3>
+                    <p>架子鼓5级、书法5级</p>
+                <h4>无级别：</h3>
+                    <p>象棋、五子棋、飞行棋</p>
+            <h3>工作室：</h3>
+                <h4>我加入的：</h4>
+                    <p>回旋工作室</p>
+                <h4>我创造的：</h4>
+                    <p>智慧实验室</p>
+                <h4>职位：</h4>
+                    <h5>回旋工作室：</h5>
+                        <p>副室长</p>
+                        <p>外交部部长</p>
+                        <p>python部成员</p>
+                    <h5>智慧实验室：</h5>
+                        <h6>智慧实验室：</h6>
+                            <p>室长</p>
+                        <h6>智慧分验室：</h6>
+                            <p>室长</p>
+        <h2>功能设施：</h2>
+            <a href=/功能/html跑酷.html>html跑酷</a>
+            <p></p>
+            <a href=/功能/绘图画板.html>绘图画板</a>
+            <p></p>
+            <a href=/功能/黑客帝国代码雨.html>黑客帝国代码雨</a>
+            <p></p>
+            <a href=/功能/粒子漩涡特效.html>粒子漩涡</a>
+            <p></p>
+            <a href=/功能/流星雨.html>流星雨</a>
+            <p></p>
+            <a href=/功能/罗盘时钟.html>罗盘时间</a>
+            <p></p>
+            <a href=/功能/植物跟随鼠标生长.html>植物跟随鼠标生长</a>
+            <p></p>
+            <a href=/功能/小星星跟随鼠标移动.html>小星星跟随鼠标移动</a>
+             
+                    <h2>智慧实验室公告栏</h2>
+            <h3>合作工作室有：</h3>
+                <p>定制跑酷工作室</p>
+                <p>回旋工作室</p>
+                <p></p>
+        <h3>实验室名单的职位</h3>
+            <p>室长:王翊辰</p>
+            <p></p>
+            <p>副室长：暂无（一位，20粉丝以上）</p>
+            <p></p>
+            <p>scr部部长:暂无（一位，15粉丝以上）</p>
+            <p></p><p></p>
+            <p>scr部成员：暂无（不限人数、不限粉丝）</p>
+            <p></p>
+            <p>py部部长：暂无（一位，15粉丝以上）</p>
+            <p></p>
+            <p>py部成员：黄秋闻、陈方昊（不限人数、不限粉丝）</p>
+            <p></p>
+            <p>C++部部长：暂无（一位，15粉丝以上）</p>
+            <p></p>
+            <p>C++部成员：暂无（不限人数、不限粉丝）</p>
+            <p></p>
+            <p>书画部部长：许闻轩（一位、15粉丝以上）</p>
+            <p></p>
+            <p>书画部成员：暂无（不限人数、不限粉丝）</p>
+            <p></p>     
+            <p>情报部部长：暂无（一位，15粉丝以上）</p>
+            <p></p>
+            <p>情报部成员：暂无（不限人数、不限粉丝）</p>
+            <p></p>
+            <p>外交部部长：暂无（一位，15粉丝以上）</p>
+            <p></p>
+            <p>外交部成员：暂无（不限人数、不限粉丝）
+            <p></p>
+            <p>普通成员：丁品皓（不限人数、不限粉丝）</p>
+            <p></p>
+            <p></p>
+            <p>智慧分验室:</p>
+            <p>室长:王翊辰</p>
+            <p>管理员：暂无（在智慧实验室成员进行一月一次的评选，有C站（学而思编程社区）的账号）（两人）</p>
+            <p>成员：暂无（在智慧实验室通过一年一度的竞选，有C站（学而思编程社区）的账号）（不限人数）</p>
+            <p>智慧分验室时智慧实验室的精英成员才能加入的，所以说要竞选</p>
+        <h3>联系方式：</h3>
+                <p>微信号：W17717467857</p>
+                <p>钉钉号：wyceden9</p>
+                <p>尽量加钉钉（因为工作室群在钉钉）</p>
+                <p>工作室群的联系方式就不透露了，加我联系方式，所有职位都要面试（团队审核）</p>
+        <h3>最后：</h3>
+            <p>希望你能踊跃提出你的观点和我们的错误，我们会及时改正，谢谢！</p>
+<br></br>
+<br></br>   
+<p>（申明：此网页有些元素来自网络，这里是转载，感谢原作者）</p>
+</body>
+</html>
