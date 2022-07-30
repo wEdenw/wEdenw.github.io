@@ -1,0 +1,109 @@
+<meta charset="utf-8">
+<title>绘图画板</title>
+<canvas width=600 height=500>
+</canvas>
+<aside>
+    <p>
+        <span>选择颜色：</span>
+        <input type="color" value="#ffffff" />
+        <button>OK</button>
+    </p>
+    <p>
+        <span>输入线宽：</span>
+        <input type="range" min=1 max=100 value=5 />
+        <button>OK</button>
+    </p>
+    <p>
+        <span id="val">5</span>
+    </p>
+    <p>
+        <button>清除</button>
+        <button>截图</button>
+    </p>
+</aside>
+<script>
+    var cnv = document.getElementsByTagName("canvas")[0];
+    var ctx = cnv.getContext("2d");
+    var stat = false, lx, ly;
+    ctx.fillStyle = "#000000";
+    ctx.fillRect(0, 0, 600, 600);
+    ctx.strokeStyle = "#ffffff";
+    ctx.lineWidth = 5;
+    cnv.onmousedown = function(event)
+    {
+        lx = event.clientX;
+        ly = event.clientY;
+        stat = true;
+    }
+    cnv.onmouseup = function(event)
+    {
+        stat = false;
+    }
+    cnv.onmousemove = function(event)
+    {
+        if (stat)
+        {
+            ctx.beginPath();
+            ctx.moveTo(lx, ly);
+            ctx.lineTo(event.clientX, event.clientY);
+            ctx.stroke();
+            lx = event.clientX;
+            ly = event.clientY;
+        }
+    }
+    document.getElementsByTagName("input")[1].onchange = function()
+    {
+        document.getElementById("val").innerHTML = 
+                document.getElementsByTagName("input")[1].value;
+        console.log(document.getElementsByTagName("input")[1].value);
+    }
+    document.getElementsByTagName("button")[0].onclick = function()
+    {
+        ctx.strokeStyle = document.getElementsByTagName("input")[0].value;
+        console.log(document.getElementsByTagName("input")[0].value);
+    }
+    document.getElementsByTagName("button")[1].onclick = function()
+    {
+        ctx.lineWidth = document.getElementsByTagName("input")[1].value;
+        console.log(document.getElementsByTagName("input")[1].value);
+    }
+    document.getElementsByTagName("button")[2].onclick = function()
+    {
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(0, 0, 600, 600);
+    }
+    document.getElementsByTagName("button")[3].onclick = function()
+    {
+        var link = document.createElement("a");
+        link.href = cnv.toDataURL({
+            format: 'image/png', 
+            quality: 1, 
+            width: 600, 
+            height: 500
+        });
+        link.download = "shot.png";
+        link.click();
+    }
+</script>
+<style>
+    aside
+    {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        border: 1px solid #808080;
+        padding: 20px;
+    }
+    button
+    {
+        box-shadow: 0px 2px 0px #222222;
+        -moz-box-shadow: 0px 2px 0px #222222;
+        position: relative;
+    }
+    button:active
+    {
+        top: 2px;
+        box-shadow: none;
+        -moz-box-shadow: none;
+    }
+</style>
