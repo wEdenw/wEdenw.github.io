@@ -1,210 +1,168 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>王翊辰Eden的个人主页</title>
-
-</head>
-<body>
-    <script>
+<title>王翊辰Eden</title>
+<style>
+* {
+  box-sizing: border-box;
+}
  
-        !function(){
-         
-         function n(n,e,t){
-         
-         return n.getAttribute(e)||t
-         
-         }
-         
-         function e(n){
-         
-         return document.getElementsByTagName(n)
-         
-         }
-         
-         function t(){
-         
-         var t=e("script"),o=t.length,i=t[o-1];
-         
-         return{
-         
-         l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)
-         
-         }
-         
-         }
-         
-         function o(){
-         
-         a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,
-         
-         c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight
-         
-         }
-         
-         function i(){
-         
-         r.clearRect(0,0,a,c);
-         
-         var n,e,t,o,m,l;
-         
-         s.forEach(function(i,x){
-         
-         for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],
-         
-         null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,
-         
-         l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),
-         
-         t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))
-         
-         }),
-        
-         x(i)
-         
-         }
-         
-         var a,c,u,m=document.createElement("canvas"),
-         
-         d=t(),l="c_n"+d.l,r=m.getContext("2d"),
-        x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||
-         
-         function(n){
-        
-         window.setTimeout(n,1e3/45)
-         
-         },
-         
-         w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.onresize=o,
-         
-         window.onmousemove=function(n){
-         
-         n=n||window.event,y.x=n.clientX,y.y=n.clientY
-         
-         },
-         
-         window.onmouseout=function(){
-         
-         y.x=null,y.y=null
-         
-         };
-         
-         for(var s=[],f=0;d.n>f;f++){
-         
-         var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})
-         
-         }
-         
-         u=s.concat([y]),
-         
-         setTimeout(function(){i()},100)
-         
-         }();
-         
-         </script>
-    <h1>王翊辰Eden的主页：</h1>
-    
-        <h2>自我介绍：</h3>
-            <h3>基本信息：</h3>
-                <p>中文名：王翊辰</p>
-                <p>英文名：Eden</p>
-                <p>性别：男</p>
-            <h3>编程能力：</h3>
-                <p>图形化、python、HTML</p>
-            <h3>才艺：</h3>
-                <h4>有级别：</h3>
-                    <p>架子鼓5级、书法5级</p>
-                <h4>无级别：</h3>
-                    <p>象棋、五子棋、飞行棋</p>
-            <h3>工作室：</h3>
-                <h4>我加入的：</h4>
-                    <p>回旋工作室</p>
-                <h4>我创造的：</h4>
-                    <p>智慧实验室</p>
-                <h4>职位：</h4>
-                    <h5>回旋工作室：</h5>
-                        <p>副室长</p>
-                        <p>外交部部长</p>
-                        <p>python部成员</p>
-                    <h5>智慧集团：</h5>
-                        <h6>智慧工作室：</h6>
-                            <p>室长</p>
-                        <h6>智慧实验室：</h6>
-                            <p>室长</p>
-            <h3>学而思账号：</h3>
-                <a href=https://code.xueersi.com/space/69952837>前往王翊辰Eden的主页</a>
-        <h2>功能设施：</h2>
-           <ul>
-            <li>　<a href=http://wedenw.github.io/html跑酷>html跑酷</a> </li>　
-            <li>　<a href=http://wedenw.github.io/绘图画板>绘图画板</a> </li>
-            <li>　<a href=http://wedenw.github.io/黑客帝国代码雨>黑客帝国代码雨</a> </li>
-            <li>　<a href=http://wedenw.github.io/粒子漩涡>粒子漩涡</a> </li>
-            <li>　<a href=http://wedenw.github.io/流星雨>流星雨</a> </li>
-            <li>　<a href=http://wedenw.github.io/罗盘时钟>罗盘时钟</a> </li>
-            <li>　<a href=http://wedenw.github.io/植物跟随鼠标生长>植物跟随鼠标生长</a> </li>
-            <li>　<a href=http://wedenw.github.io/小星星跟随鼠标移动>小星星跟随鼠标移动</a> </li>
-               
-                    <br></br>
-    
-                    <h2>智慧集团公告栏</h2>
-            <h3>合作工作室有：</h3>
-                <p>定制跑酷工作室</p>
-                <p>回旋工作室</p>
-                <p></p>
-        <h3>集团名单的职位</h3>
-            <p>室长:王翊辰</p>
-            <p></p>
-            <p>副室长：暂无（一位，20粉丝以上）</p>
-            <p></p>
-            <p>scr部部长:暂无（一位，15粉丝以上）</p>
-            <p></p><p></p>
-            <p>scr部成员：暂无（不限人数、不限粉丝）</p>
-            <p></p>
-            <p>py部部长：暂无（一位，15粉丝以上）</p>
-            <p></p>
-            <p>py部成员：黄秋闻、陈方昊（不限人数、不限粉丝）</p>
-            <p></p>
-            <p>C++部部长：暂无（一位，15粉丝以上）</p>
-            <p></p>
-            <p>C++部成员：暂无（不限人数、不限粉丝）</p>
-            <p></p>
-            <p>书画部部长：许闻轩（一位、15粉丝以上）</p>
-            <p></p>
-            <p>书画部成员：暂无（不限人数、不限粉丝）</p>
-            <p></p>     
-            <p>情报部部长：暂无（一位，15粉丝以上）</p>
-            <p></p>
-            <p>情报部成员：暂无（不限人数、不限粉丝）</p>
-            <p></p>
-            <p>外交部部长：暂无（一位，15粉丝以上）</p>
-            <p></p>
-            <p>外交部成员：暂无（不限人数、不限粉丝）
-            <p></p>
-            <p>普通成员：丁品皓（不限人数、不限粉丝）</p>
-               <p>用于发布集团的通知</p>
-            <p></p>
-            <p></p>
-            <p>智慧工作室:</p>
-            <p>室长:王翊辰</p>
-            <p>管理员：暂无（在智慧工作室成员进行一月一次的评选，有C站（学而思编程社区）的账号）（两人）</p>
-            <p>成员：暂无（在智慧集团通过向室长申请进入，有C站（学而思编程社区）的账号）（不限人数）</p>
-            <p>用于研究并发布作品的正式版本</p>
-               <p></p>
-            <p>智慧实验室:</p>
-            <p>室长:王翊辰</p>
-            <p>管理员：暂无（在智慧实验室成员进行一月一次的评选，有C站（学而思编程社区）的账号）（两人）</p>
-            <p>成员：暂无（在智慧集团通过向室长申请进入，有C站（学而思编程社区）的账号）（不限人数）</p>
-            <p>用于研究并发布作品的测试版本</p>
-               <p></p>
-        <h3>联系方式：</h3>
-                <p>微信号：W17717467857</p>
-                <p>钉钉号：wycedan9</p>
-                <p>尽量加钉钉（因为工作室群在钉钉）</p>
-                <p>工作室群的联系方式就不透露了，加我联系方式，所有职位都要面试（团队审核）</p>
-        <h3>最后：</h3>
-            <p>希望你能踊跃提出你的观点和我们的错误，我们会及时改正，谢谢！</p>
-<br></br>
-<br></br>   
-<p>（申明：此网页有些元素来自网络，这里是转载，感谢原作者）</p>
-</body>
-</html>
+body {
+  font-family: Arial;
+  padding: 10px;
+}
+ 
+/* 头部标题 */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+ 
+.header h1 {
+  font-size: 50px;
+}
+ 
+/* 导航条 */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+ 
+/* 导航条链接 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ 
+/* 链接颜色修改 */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+ 
+/* 创建两列 */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+ 
+/* 右侧栏 */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+ 
+/* 图像部分 */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+ 
+/* 文章卡片效果 */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+ 
+/* 列后面清除浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ 
+/* 底部 */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+ 
+/* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+ 
+/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body background="psc.jpg" mpa-version="7.5.8" mpa-extension-id="....">
+
+<div class="header">
+  <div id="box" style="opacity: 0.01;"> <h2><span>王翊辰Eden</span>的个人主页</h2></div>
+    	<script>
+        	var i = 1;
+        	var flag = true;
+        	function fade() {
+            	var box = document.getElementById('box');
+            	if (document.all) {
+                	box.style.filter = "alpha(opacity='+i+')";
+            	} else {
+                	box.style.opacity = parseFloat(i / 100);
+            	}
+            	if (i < 100 && flag) {
+                	i += 5;
+            	}
+            	else {
+                	flag = false;
+           	}
+            	if (i > 0 && !flag) {
+                	i -= 5;
+            	}
+            	else {
+                	flag = true;
+            	}
+            	setTimeout('fade()', 50);
+        	}
+        	fade();
+    	</script>
+  <p><span>王翊辰Eden</span>：<span>用编程改变世界</span></p>
+</div>
+
+<div class="topnav">
+    <!--下面改成自己的链接-->
+  <a href="https://code.xueersi.com/space/69952837">王翊辰Eden学而思的主页</a>
+  <a href="http://wedenw.github.io/智慧实验室公告栏">智慧实验室公告栏</a>
+</div>
+
+      <h2>关于王翊辰Eden</h2>
+      <h3>性别：男</h3>
+      <h3>生日：2013年5月15日</h3>
+      <h3>地区：上海宝山</h3>
+      <h3>才艺：图形化、python、HTML、架子鼓5级、硬笔书法5级、象棋、五子棋、飞行棋</h3>
+      <h3>格言：用编程改变世界</h3>
+      <h3>工作室：智慧集团、回旋工作室</h3>
+    </div>
+    <div class="card">
+      
+    <div class="card">
+      <h3>关注我</h3>
+      <p>全民回关，请勿催更</p>
+    </div>
+  </div>
+</div>
+
+
